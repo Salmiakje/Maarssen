@@ -2,6 +2,11 @@
 [class*="col-"]{
     width: 100%;
 }
+@media only screen and (max-width: 600px) {
+    [class*="col-"] {
+        float: left;
+        padding: 15 px;
+    }
 @media only screen and (min-width: 768px) {
     [class*="col-"] {
         float: left;
