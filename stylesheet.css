@@ -22,6 +22,18 @@
         width: 100%;
     }
 
+    @media only screen and (min-width: 992px) {
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+    }
+
+@media only screen and (min-width: 1200px) {
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+    }
+
 /** opmaak */
 header {
     width: 100%;
