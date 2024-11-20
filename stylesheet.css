@@ -10,6 +10,23 @@
             }
         }
 
+@media (min-width: 768px) {
+            .row {
+                display: table;
+            }
+            .column {
+                display: table-cell;
+                vertical-align: top;
+                width: 50%;
+            }
+            .text-column {
+                padding-right: 20px;
+            }
+            .image-column {
+                padding-left: 20px;
+            }
+        }
+
 @media only screen and (min-width: 768px) {
     [class*="col-"] {
         float: left;
@@ -89,14 +106,18 @@ html, body {
     min-height: 100%;
 }
 
-.container,
+.container {
+    width: 100%;
+    paddong: 20px; 
+}
 .row {
     display: block;
-    overflow: hidden;
+    width: 100%;
 }
 
-.container {
-    margin: 0 auto;
+.column {
+    width: 100%;
+    margin-bottom: 20 px;
 }
 
 [class*="span"] {
