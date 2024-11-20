@@ -36,6 +36,18 @@
     .col-12 { width: 100%; }
 }
 
+/*clearfix*/
+.container {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Opmaak */
 header {
     width: 100%;
