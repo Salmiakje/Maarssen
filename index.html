@@ -1,109 +1,18 @@
-Bedankt voor het delen van je HTML-code! Laten we nu kijken hoe we deze mobielvriendelijk kunnen maken. Hier zijn enkele suggesties:
-
-1. **Gebruik van Meta Tag voor Responsiveness**:
-   Voeg deze meta tag toe in de `<head>` sectie van je HTML om ervoor te zorgen dat de viewport zich aanpast aan de breedte van het apparaat:
-   ```html
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   ```
-
-2. **Flexbox of Grid Layout**:
-   Gebruik CSS Flexbox of Grid om je layout responsief te maken. Hier is een voorbeeld met Flexbox:
-   ```css
-   .container {
-       display: flex;
-       flex-direction: column;
-       padding: 20px;
-   }
-
-   .section {
-       margin-bottom: 20px;
-   }
-
-   @media (min-width: 768px) {
-       .container {
-           flex-direction: row;
-           flex-wrap: wrap;
-       }
-
-       .section {
-           flex: 1;
-           margin: 10px;
-       }
-   }
-   ```
-
-3. **Responsive Text and Images**:
-   Zorg ervoor dat tekst en afbeeldingen zich aanpassen aan verschillende schermgroottes:
-   ```css
-   body {
-       font-size: 16px;
-   }
-
-   @media (min-width: 768px) {
-       body {
-           font-size: 18px;
-       }
-   }
-
-   img {
-       max-width: 100%;
-       height: auto;
-   }
-   ```
-
-4. **Gebruik van Media Queries**:
-   Pas je layout aan voor verschillende schermgroottes met media queries:
-   ```css
-   @media (max-width: 600px) {
-       .section {
-           font-size: 14px;
-       }
-   }
-   ```
-
-Hier is een voorbeeld van hoe je HTML en CSS samen kunt gebruiken om een mobielvriendelijke pagina te maken:
-
-```html
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maarssen</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-            .section {
-                flex: 1;
-                margin: 10px;
-            }
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <title>Feitjes over Maarssen</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="section">
-            <h1>Feitjes over Maarssen</h1>
+    <header>
+        <h1>Feitjes over Maarssen</h1>
+    </header>
+    <main>
+        <section id="feitjes">
+            <h2>Algemene Feiten</h2>
             <ul>
                 <li>Sinds 1 januari 2021 zijn er circa 40,000 inwoners</li>
                 <li>Maarssen bestaat uit 3 dorpen die samen 1 naam hebben gekregen</li>
@@ -111,16 +20,16 @@ Hier is een voorbeeld van hoe je HTML en CSS samen kunt gebruiken om een mobielv
                 <li>De Vecht stroomt door Maarssen heen</li>
                 <li>In de 9e eeuw stond Maarssen bekend als Marsna</li>
             </ul>
-        </div>
-        <div class="section">
+        </section>
+        <section id="maarseveense-plassen">
             <h2>De Maarseveense Plassen</h2>
             <p>Lekker zwemmen, spelen, en luieren in ons strandbad met haar mooie zandstrand, water en ruime ligweides. Kinderen vermaken zich uren op de vele speeltoestellen. Het fantastische speeleiland heeft twee waterglijbanen en het waterdoolhof. Voor de allerkleinsten zijn er twee kleuterbadjes, piratenbootjes en andere speelvoorzieningen. Het naaktstrand is geliefd bij mensen die in alle rust willen recreëren. Onze toezichthouders zijn herkenbaar gekleed.</p>
-        </div>
-        <div class="section">
+        </section>
+        <section id="kinderboerderij-otterspoor">
             <h2>Kinderboerderij Otterspoor</h2>
             <p>De Kinderboerderij heeft als doel om het publiek, en in het bijzonder de jeugd van 4 tot 15 jaar, op een plezierige wijze in contact te brengen met het boeren- en buitenleven. Kinderen kunnen hier leren omgaan met boerderijdieren. Wij trachten de bezoekers zo veel mogelijk in aanraking te laten komen met onze dieren. Daarom lopen er veel dieren los tussen het publiek.</p>
-        </div>
-    </div>
+        </section>
+    </main>
     <footer>
         <p>Ⓒ Gemaakt door: Katja Matser</p>
     </footer>
